@@ -7,7 +7,7 @@ class Employee(People):
         pass
 
     @abstractmethod
-    def setJobId(self):
+    def setJobId(self, jobId):
         pass
 
     @abstractmethod

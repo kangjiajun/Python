@@ -1,6 +1,5 @@
 import pygame
 from PathMgr import *
-from ImageMgr.ImageContainer import *
 from ImageMgr.ImageLoader import *
 
 

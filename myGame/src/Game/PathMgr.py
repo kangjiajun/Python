@@ -1,20 +1,25 @@
 import os
 
-class PathMgr:
 
-    def getProjectPath(self):
-        curPath = self.getCurPath()
+class PathMgr:
+    def getProjectDir(self):
+        curPath = self.getCurDir()
         splitPos = curPath.rfind("\\")
         return curPath[0:splitPos]
 
-    def getImagePath(self):
-        return "".join([self.getProjectPath(), "\\resources\\images"])
+    def getImageDir(self):
+        return "".join([self.getProjectDir(), "\\resources\\images"])
 
-    def getSoundPath(self):
-        return "".join([self.getProjectPath(), "\\resources\\sounds"])
+    def getSoundDir(self):
+        return "".join([self.getProjectDir(), "\\resources\\sounds"])
 
-    def getSrcPath(self):
-        return self.getCurPath()
+    def getSrcDir(self):
+        return self.getCurDir()
 
-    def getCurPath(self):
+    def getCurDir(self):
         return os.getcwd()
+
+    def getImageName(self, imagePath):
+        length = len(imagePath)
+        begin = imagePath.rfind("\\") + 1
+        return imagePath[begin:length]

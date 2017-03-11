@@ -16,7 +16,7 @@ class GameLoader:
         pygame.display.set_mode(resolution, mode, depth)
 
     def __loadImages(self):
-        path = PathMgr().getImagePath()
+        path = PathMgr().getImageDir()
         imageLoader = ImageLoader()
         imageLoader.load(path, self.__imageContainer)
 

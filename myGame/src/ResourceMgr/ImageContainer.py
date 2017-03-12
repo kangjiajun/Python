@@ -13,4 +13,4 @@ class ImageContainer(ResContainer):
         if self.exist(name):
             raise Exception("Image with key : " + name + " already exist")
 
-        self.__resources[name] = resSource
+        self._ResContainer__resources[name] = resSource

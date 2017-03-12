@@ -1,9 +1,9 @@
-from Game.GameLoader import *
+from Game import GameRunner
+
 
 def main():
-    game = GameLoader()
+    GameRunner.run()
 
 
 if __name__ == "__main__":
     main()
-

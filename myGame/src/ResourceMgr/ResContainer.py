@@ -5,7 +5,6 @@ class ResContainer:
     __metaclass__ = ABCMeta
 
     def __init__(self):
-        ResContainer.__init__(self)
         self.__resources = {}
 
     @abstractmethod
@@ -19,7 +18,8 @@ class ResContainer:
             return None
 
     def exist(self, resName):
-        if resName in self.__resources:
+        if resName in self.__resources.keys():
+            print "True"
             return True
         else:
             return False

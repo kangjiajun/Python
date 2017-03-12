@@ -19,7 +19,7 @@ class PathMgr:
     def getCurDir(self):
         return os.getcwd()
 
-    def getFileNameFromPath(self, imagePath):
-        length = len(imagePath)
-        begin = imagePath.rfind("\\") + 1
-        return imagePath[begin:length]
+    def getShortFileNameFromPath(self, imagePath):
+        (filePath, fileName) = os.path.split((imagePath))
+        (shortName, extension) = os.path.splitext(fileName)
+        return shortName

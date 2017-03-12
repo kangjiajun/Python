@@ -1,6 +1,4 @@
-import pygame
-from PathMgr import *
-from ImageMgr.ImageLoader import *
+from ResourceMgr.ImageLoader import *
 
 
 class GameLoader:
